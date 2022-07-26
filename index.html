@@ -19,19 +19,14 @@
   </head>
   <body>
     <header class="jumbotron jumbotron-fluid text-container">
-      <img
-        class="sun-image"
-        src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-128.png"
-        srcset="
-          https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-256.png 2x
-        "
-        alt="weather sun"
-      />
-      <h1>Weather Dashboard</h1>
+        <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" data-src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun " title="Sun " width="64" height="64" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/869/869869.png 4x">
+        <img src="https://cdn-icons-png.flaticon.com/128/826/826957.png" data-src="https://cdn-icons-png.flaticon.com/128/826/826957.png" alt="Rain " title="Rain " width="64" height="64" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/826/826957.png 4x">
+        <img src="https://cdn-icons.flaticon.com/png/128/1207/premium/1207634.png?token=exp=1658868237~hmac=cb44e7a449f99f627be705aa2c11bb25" data-src="https://cdn-icons.flaticon.com/png/128/1207/premium/1207634.png?token=exp=1658868237~hmac=cb44e7a449f99f627be705aa2c11bb25" alt="Snow " title="Snow " width="64" height="64" class="lzy lazyload--done" srcset="https://cdn-icons.flaticon.com/png/128/1207/premium/1207634.png?token=exp=1658868237~hmac=cb44e7a449f99f627be705aa2c11bb25 4x">
+        <h1>Weather Dashboard</h1>
     </header>
         <main class="container-fluid">
           <section class="row">
-            <div class="col-lg-3 bg-light">
+            <div class="col-lg-3 bg-dark">
               <h5 class="mt-1">Search for a City:</h5>
               <div class="input-group mb-3">
                 <input
@@ -39,23 +34,19 @@
                   type="text"
                   class="form-control"
                   placeholder="Enter a city"
-                  aria-label="Enter a city"
-                />
-                <div class="input-group-append">
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                    id="search-button"
-                  >
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
+                  aria-label="Enter a city"/>
+           
+                <button
+                    class="btn btn-primary col-lg-2"
+                    type="submit" value="Submit">
+                    <img src=" https://cdn-icons-png.flaticon.com/512/751/751463.png" width="25" height="25" alt="" title="" class="img-small">
+                </button>
+         
               </div>
               <button
                 class="btn btn-primary mb-3"
                 type="button"
-                id="clear-history"
-              >
+                id="clear-history">
                 Clear history
               </button>
               <form id="history"></form>
