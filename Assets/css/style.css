@@ -1,0 +1,36 @@
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #5594AD;
+}
+
+.jumbotron {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background-color:#5594AD;
+    color: #FAF47A;
+    border-radius: 0;
+    border-bottom: 7px solid rgb(87, 85, 81);
+    /* border-top: 7px solid rgb(87, 85, 81); */
+  }
+
+  label {
+      margin-top: 50px;
+      color:#93DCFA;
+      font-size: 20px;
+  }
+
+  input {
+      margin: 20px auto;
+  }
+
+  button {
+      background-color: #FAF47A;
+      border-radius: 5px;
+      color: rgb(87, 85, 81);
+      height: 50px;
+      width: 100px;
+  }
+
+ 
