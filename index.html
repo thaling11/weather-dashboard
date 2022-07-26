@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/869/869869.png">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -19,76 +20,112 @@
   </head>
   <body>
     <header class="jumbotron jumbotron-fluid text-container">
-        <img src="https://cdn-icons-png.flaticon.com/128/869/869869.png" data-src="https://cdn-icons-png.flaticon.com/128/869/869869.png" alt="Sun " title="Sun " width="64" height="64" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/869/869869.png 4x">
-        <img src="https://cdn-icons-png.flaticon.com/128/826/826957.png" data-src="https://cdn-icons-png.flaticon.com/128/826/826957.png" alt="Rain " title="Rain " width="64" height="64" class="lzy lazyload--done" srcset="https://cdn-icons-png.flaticon.com/128/826/826957.png 4x">
-        <img src="https://cdn-icons.flaticon.com/png/128/1207/premium/1207634.png?token=exp=1658868237~hmac=cb44e7a449f99f627be705aa2c11bb25" data-src="https://cdn-icons.flaticon.com/png/128/1207/premium/1207634.png?token=exp=1658868237~hmac=cb44e7a449f99f627be705aa2c11bb25" alt="Snow " title="Snow " width="64" height="64" class="lzy lazyload--done" srcset="https://cdn-icons.flaticon.com/png/128/1207/premium/1207634.png?token=exp=1658868237~hmac=cb44e7a449f99f627be705aa2c11bb25 4x">
-        <h1>Weather Dashboard</h1>
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/869/869869.png"
+        data-src="https://cdn-icons-png.flaticon.com/128/869/869869.png"
+        alt="Sun "
+        title="Sun "
+        width="64"
+        height="64"
+        class="lzy lazyload--done"
+        srcset="https://cdn-icons-png.flaticon.com/128/869/869869.png 4x"
+      />
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/826/826957.png"
+        data-src="https://cdn-icons-png.flaticon.com/128/826/826957.png"
+        alt="Rain "
+        title="Rain "
+        width="64"
+        height="64"
+        class="lzy lazyload--done"
+        srcset="https://cdn-icons-png.flaticon.com/128/826/826957.png 4x"
+      />
+      <img
+        src="https://cdn-icons.flaticon.com/png/128/1207/premium/1207634.png?token=exp=1658868237~hmac=cb44e7a449f99f627be705aa2c11bb25"
+        data-src="https://cdn-icons.flaticon.com/png/128/1207/premium/1207634.png?token=exp=1658868237~hmac=cb44e7a449f99f627be705aa2c11bb25"
+        alt="Snow "
+        title="Snow "
+        width="64"
+        height="64"
+        class="lzy lazyload--done"
+        srcset="
+          https://cdn-icons.flaticon.com/png/128/1207/premium/1207634.png?token=exp=1658868237~hmac=cb44e7a449f99f627be705aa2c11bb25 4x"
+      />
+      <h1>Weather Dashboard</h1>
     </header>
-        <main class="container-fluid">
-          <section class="row">
-            <div class="col-lg-3 bg-dark">
-              <h5 class="mt-1">Search for a City:</h5>
-              <div class="input-group mb-3">
-                <input
-                  id="enter-city"
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter a city"
-                  aria-label="Enter a city"/>
-           
-                <button
-                    class="btn btn-primary col-lg-2"
-                    type="submit" value="Submit">
-                    <img src=" https://cdn-icons-png.flaticon.com/512/751/751463.png" width="25" height="25" alt="" title="" class="img-small">
-                </button>
-         
-              </div>
-              <button
-                class="btn btn-primary mb-3"
-                type="button"
-                id="clear-history">
-                Clear history
-              </button>
-              <form id="history"></form>
-            </div>
-            <div class="col-lg-9">
-              <div class="row mr-0">
-                <div class="col-lg-11 card m-3 d-none" id="today-weather">
-                  <div class="card-body">
-                    <h3 id="city-name" class="city-name align-middle"></h3>
-                    <img id="current-pic" alt="" />
-                    <p id="temperature"></p>
-                    <p id="humidity"></p>
-                    <p id="wind-speed"></p>
-                    <p id="UV-index"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="row d-none" id="fiveday-header">
-                <div class="col-12">
-                  <h3>5-Day Forecast</h3>
-                </div>
-              </div>
-              <div class="row">
-                <div
-                  class="col-md-2 forecast bg-primary text-white m-2 rounded"
-                ></div>
-                <div
-                  class="col-md-2 forecast bg-primary text-white m-2 rounded"
-                ></div>
-                <div
-                  class="col-md-2 forecast bg-primary text-white m-2 rounded"
-                ></div>
-                <div
-                  class="col-md-2 forecast bg-primary text-white m-2 rounded"
-                ></div>
-                <div
-                  class="col-md-2 forecast bg-primary text-white m-2 rounded"
-                ></div>
+    <main class="container-fluid">
+      <section class="row">
+        <div class="col-lg-3 bg-dark">
+          <h5 class="mt-1">Search for a City:</h5>
+          <div class="input-group mb-3">
+            <input
+              id="enter-city"
+              type="text"
+              class="form-control"
+              placeholder="Enter a city"
+              aria-label="Enter a city"
+            />
+
+            <button
+              class="btn btn-primary col-lg-2"
+              type="submit"
+              value="Submit"
+              id="search-button"
+            >
+              <img
+                src=" https://cdn-icons-png.flaticon.com/512/751/751463.png"
+                width="25"
+                height="25"
+                alt=""
+                title=""
+                class="img-small"
+              />
+            </button>
+          </div>
+          <button class="btn btn-primary mb-3" type="button" id="clear-history">
+            Clear history
+          </button>
+          <form id="history"></form>
+        </div>
+        <div class="col-lg-9">
+          <div class="row mr-0">
+            <div class="col-lg-11 card m-3 d-none" id="today-weather">
+              <div class="card-body">
+                <h3 id="city-name" class="city-name align-middle"></h3>
+                <img id="current-pic" alt="" />
+                <p id="temperature"></p>
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
+                <p id="UV-index"></p>
               </div>
             </div>
-        </section>
-        </main>
+          </div>
+          <div class="row d-none" id="fiveday-header">
+            <div class="col-12">
+              <h3>5-Day Forecast</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div>
+            <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div>
+            <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div>
+            <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div>
+            <div
+              class="col-md-2 forecast bg-primary text-white m-2 rounded"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
