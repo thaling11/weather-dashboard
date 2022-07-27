@@ -85,10 +85,61 @@ function retrieveWeather(data) {
     currentWeather.append(currentUvElement);
 
     //5 day forecast
+    var forecastHeader = $("#forecastHeader");
+    var forecastHeaderElement = $("<h2>");
+    forecastHeaderElement.text("Five Day Forecast: ");
+    forecastHeader.append(forecastHeaderElement);
 
-    });
+    //weather info from API
+    for (var i = 1; i <=5; i++) {
+        var date;
+        var temp;
+        var icon;
+        var wind;
+        var humidity;
+
+        date = data.daily[i].dt;
+        date = moment.unix(date).format("MM/DD/YYYY");
+
+        temp = data.daily[i].temp.day;
+        icon = data.daily[i].weather[0].icon;
+        wind = data.daily[i].wind_speed;
+        humidity = data.daily[i].humidity;
+
+        var card = document.createElement('div');
+        card.classList.add('card', 'col-2', 'm-1', 'bg-primary', 'text-white');
+
+        var cardSpace = document.createElement('div');
+        cardSpace.classList.add('card-body');
+        cardSpace.innerHTML = `<h6>${date}</h6>
+            <img src= "http://openweathermap.org/img/wn/${icon}.png"> </><br>
+                ${temp}°C<br>
+                ${wind} KPH <br>
+                ${humidity}%`
+                
+            card.appendChild(cardSpace);
+            fiveDayForecastEl.append(card);
+    }
+
+    })
+    return;
 }
 
+// search history buttons
+function searchHistory() {
+    var storedCities = JSON.parse(localStorage.getItem("cities")) || [];
+    var pastHistory = document.querySelector("#search-history");
+
+    pastHistory.innerHTML = ""; 
+
+    for (i = 0; i < storedCities.length; i++) {
+        var cityHistoryBtn = document.createElement("button");
+        cityHistoryBtn.classList.add("btn", "btn-primary", "my-2", "past-city");
+        cityHistoryBtn.textContent = `${storedCities[i].city}`;
+        pastHistory.appendChild(cityHistoryBtn);
+    }
+    return;
+}
 //spectial function --event listeners
 
 //logic/start app if required
