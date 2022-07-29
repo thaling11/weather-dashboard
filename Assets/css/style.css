@@ -1,26 +1,33 @@
-
 body {
-    font-family: 'Red Hat Display', sans-serif;
-    background-color: #5594AD;
-    color: #5594AD;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: #5594ad;
 }
 
 .jumbotron {
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    background-color:#5594AD;
-    color: #FAF47A;
-    border-radius: 0;
-    border-bottom: 7px solid rgb(87, 85, 81);
-    /* border-top: 7px solid rgb(87, 85, 81); */
-  }
-  
-  .row {
-      margin: 50px 20px;
-      padding: 30px;
-  }
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  background-color: #5594ad;
+  color: #faf47a;
+  border-radius: 0;
+  border-bottom: 7px solid rgb(87, 85, 81);
+  /* border-top: 7px solid rgb(87, 85, 81); */
+}
 
+.row {
+  margin: 30px 20px;
+  padding: 25px;
+  color: rgb(79, 78, 77);
+}
 
+h5 {
+  color: #5594ad;
+}
 
- 
+h2 {
+    font-weight: 400;
+}
+
+.search-section {
+    padding: 20px;
+}
