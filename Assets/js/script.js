@@ -44,7 +44,7 @@ function  currentWeather(data) {
 
     let temp = document.createElement("p");
     temp.classList.add("temp")
-    temp.textContent = data.current.temp
+    temp.textContent = "Temperature: " + data.current.temp + "°F"
     current.append(temp);
 
     let icon = document.createElement("img");
@@ -60,7 +60,7 @@ function  currentWeather(data) {
 
     let windSpeed = document.createElement("p");
     windSpeed.classList.add("wind-speed");
-    windSpeed.textContent = data.current.wind_speed;
+    windSpeed.textContent = "Wind speed: " + data.current.wind_speed + "mph";
     current.append(windSpeed);
 }
 
