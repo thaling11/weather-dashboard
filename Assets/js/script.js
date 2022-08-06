@@ -21,7 +21,7 @@ function getWeatherdata() {
 function getCoordinates(data) {
     var lat = data[0].lat;
     var lon = data[0].lon;
-    var coordinateData = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${APIkey}&units=imperial`
+    var coordinateData = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${APIkey}&units=imperial`;
     fetch(coordinateData)
     .then((response) => response.json())
     .then(function (data) {
@@ -30,6 +30,7 @@ function getCoordinates(data) {
         .then(function (data) {
             console.log(data);
             currentWeather(data);
+            fiveDay(data);
         })
     })
 };
@@ -41,10 +42,12 @@ function  currentWeather(data) {
     // let cityName = document.createElement("h2");
     // cityName.textContent = data[0].name;
 
+    //let currentDate = document.createElement("h4");
+    //currentDate.textContent 
 
     let temp = document.createElement("p");
     temp.classList.add("temp")
-    temp.textContent = "Temperature: " + data.current.temp + "°F"
+    temp.textContent = "Temperature: " + data.current.temp + " °F"
     current.append(temp);
 
     let icon = document.createElement("img");
@@ -60,9 +63,9 @@ function  currentWeather(data) {
 
     let windSpeed = document.createElement("p");
     windSpeed.classList.add("wind-speed");
-    windSpeed.textContent = "Wind speed: " + data.current.wind_speed + "mph";
+    windSpeed.textContent = "Wind speed: " + data.current.wind_speed + " mph";
     current.append(windSpeed);
-}
+};
 
 
 // //store in local storage
@@ -72,7 +75,15 @@ function storeData(data) {
 };
 
 //five day forecast
-
+function fiveDay(data) {
+    let fiveDayForecast = document.querySelector("#fiveDayForecast");
+    for (let index = 0; index < 4; index++) {
+        let fiveDayTemp = document.createElement("p");
+        // fiveDayTemp.classList.add("fiveDayTemp");
+        fiveDayTemp.textContent = data.daily[1].temp;
+        fiveDayForecast.append(fiveDayTemp);
+    }
+}
 
 
 
