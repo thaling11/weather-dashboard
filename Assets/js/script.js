@@ -65,6 +65,23 @@ function  currentWeather(data) {
     windSpeed.classList.add("wind-speed");
     windSpeed.textContent = "Wind speed: " + data.current.wind_speed + " mph";
     current.append(windSpeed);
+
+    let uvIndex = document.createElement("p");
+    let uvIndexNumber = data.current.uvi;
+    uvIndex.classList.add("uv-index");
+    uvIndex.textContent = "UV Index: " + uvIndexNumber;
+    if ( uvIndexNumber < 3 ) {
+        uvIndex.style.color = "green";
+    } else if (uvIndexNumber < 6 ) {
+        uvIndex.style.color = "yellow";
+    } else if (uvIndexNumber < 8 ) {
+        uvIndex.style.color = "orange";
+    } else if (uvIndexNumber < 11 ) {
+        uvIndex.style.color = "red";
+    } else {
+        uvIndex.style.color = "purple";
+    }
+    current.append(uvIndex);
 };
 
 
@@ -77,26 +94,29 @@ function storeData(data) {
 //five day forecast
 function fiveDay(data) {
     let fiveDayForecast = document.querySelector("#fiveDayForecast");
-    for (let index = 0; index < 4; index++) {
-        let fiveDayTemp = document.createElement("p");
-        // fiveDayTemp.classList.add("fiveDayTemp");
-        fiveDayTemp.textContent = data.daily[1].temp;
-        fiveDayForecast.append(fiveDayTemp);
+    let fiveDayTemp = document.createElement("p");
+    for (let index = 0; index < 5; index++) {
+        let date;
+        let temp;
+        let icon;
+        let windSpeed;
+        let humidity;
     }
 }
 
 
 
-//add history
+//add history 
 
-//event listener to search button/clear button
+
+//event listener to search button
 searchBtn.addEventListener("click", function() {
     cityName = document.querySelector("#city-input").value;
     console.log(cityName);
     getWeatherdata();
-    // getCoordinates();
 });
 
+//clear button event listener
 
    
 
