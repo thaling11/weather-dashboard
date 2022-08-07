@@ -3,6 +3,7 @@ var APIkey = "a680d80e94900005ef907a18f28f496e";
 var searchBtn = document.querySelector("#search-button");
 // var cityInput = document.querySelector("city-input");
 
+var currentCity = "";
 var searchedCities = [];
 
 //fetch API weather data
@@ -35,15 +36,18 @@ function getCoordinates(data) {
     })
 };
 
-function  currentWeather(data) {
+function currentWeather(data) {
+    let currentHeader = document.querySelector("#current-header");
    let current = document.querySelector("#currentConditions"); 
    let weatherIconCode = "";
 
-    // let cityName = document.createElement("h2");
-    // cityName.textContent = data[0].name;
+    // let cityName = document.createElement("h4");
+    // cityName.textContent = 
 
-    //let currentDate = document.createElement("h4");
-    //currentDate.textContent 
+    let currentDate = document.createElement("h4");
+    currentDate = data.current.dt;
+    currentDate = moment.unix(currentDate).format("MM/DD/YY");
+    currentHeader.append(currentDate);
 
     let temp = document.createElement("p");
     temp.classList.add("temp")
@@ -101,6 +105,9 @@ function fiveDay(data) {
         let icon;
         let windSpeed;
         let humidity;
+
+        date = data.daily[index].dt;
+        date = moment.unix(date).format("MM/DD/YY")
     }
 }
 
