@@ -1,5 +1,5 @@
 body {
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
   background-color: #77a9bc;
 }
 
@@ -14,6 +14,15 @@ body {
   /* border-top: 7px solid rgb(87, 85, 81); */
 }
 
+#search-button {
+  display: flex;
+  justify-content: center;
+}
+
+#storeCitiesButton {
+  display: none;
+}
+
 .row {
   margin: 30px 20px;
   padding: 25px;
@@ -21,7 +30,7 @@ body {
 }
 
 .currentContainer {
-  border: 5px solid grey;
+  border: 5px solid rgb(87, 85, 81);
 }
 
 #currentConditions,
@@ -49,11 +58,30 @@ h5 {
 }
 
 h2 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .search-section {
-    padding: 20px;
+  padding: 20px;
 }
 
+@media only screen and (max-width: 650) {
+  #currentConditions,
+  .icon {
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
 
+  .uv-index,
+  .wind-speed {
+    margin-left: 15px;
+  margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
