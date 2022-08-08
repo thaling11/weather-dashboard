@@ -20,6 +20,10 @@ body {
   color: rgb(79, 78, 77);
 }
 
+.currentContainer {
+  border: 5px solid grey;
+}
+
 #currentConditions,
 .icon {
   font-size: 25px;
