@@ -14,7 +14,7 @@ This purpose of this project is to create a weather dashboard for users to searc
 
 ## Mock-Up
 
-![Screenshot-1](./Assets/images/week-6-challenge-screenshot.jpg)
+![Screenshot-1](./Assets/images/weather-app-screenshot.jpg)
 
 ## Application link
 
